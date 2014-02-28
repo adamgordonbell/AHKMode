@@ -3,18 +3,12 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-Toggle := False
+ShiftMode := False
 
-$Space::
-  KeyWait, Space, T0.15 ; Adjust this value to control the delay before switching modes
-  If ErrorLevel
-    Toggle := True
-  Else
-    Send {Space}
-  Return
+$Shift::
+	ShiftMode := True
 
-#If Toggle
-Space UP::Toggle := False
+#If ShiftMode
 q::p
 w::o
 e::i
@@ -30,7 +24,6 @@ x::.
 c::,
 v::m
 b::n
-
 y::t
 u::r
 i::e
@@ -46,5 +39,5 @@ m::v
 ,::c
 .::x
 /::z
-
+ShiftMode := False
 #If

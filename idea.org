@@ -1,0 +1,23 @@
+
+* Idea:
+
+** use autohotkey to make "modes" or as keyboard firmware calls them layers
+
+** Modes have an entry method, an exit method, and mapping for all the keys in that mode
+
+** Modes
+
+*** Sticky Shift
+entry - shift
+exit - after any keypress
+mapping = shift + key
+*** Caps Word
+entry - shift shift
+exit - space
+mapping - shift + key
+
+*** camelcase
+entry -
+exit - enter
+*** 
+*** 
